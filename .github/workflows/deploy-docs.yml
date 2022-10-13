@@ -21,9 +21,9 @@ jobs:
       - name: Install dependencies
         run: |
           if [ -e package-lock.json ]; then
-          npm ci
+          npm ci --legacy-peer-deps
           else
-          npm i
+          npm i --legacy-peer-deps
           fi
 
       - name: Build Storybook
